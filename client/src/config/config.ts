@@ -1,5 +1,6 @@
 export const config = {
   paths: {
-    home: '/'
+    search: '/',
+    ratings: '/ratings'
   }
 }

@@ -1,30 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMatch } from 'react-router-dom'
 import { HeaderLink, HeaderText } from './LinkText.styles';
 import { config } from './config/config';
 
 const LinkText = () => {
-  const isHomeRoute = !!useMatch(config.paths.home);
+  const isHomeRoute = !!useMatch(config.paths.search);
   const { t } = useTranslation();
 
   return (
     <div>
-      <HeaderLink active={isHomeRoute}>
-        <HeaderText>
+      <HeaderLink >
+        <HeaderText $active={isHomeRoute}>
           {t('first.test.phrase')}
         </HeaderText>   
       </HeaderLink>
-      <HeaderLink active={isHomeRoute}>
-        <HeaderText>
-          {t('second.test.phrase')}
-        </HeaderText>   
-      </HeaderLink>
-      <HeaderLink active={isHomeRoute}>
-        <HeaderText>
-          {t('third.test.phrase')}
-        </HeaderText>   
-      </HeaderLink>  
     </div>
 
   )

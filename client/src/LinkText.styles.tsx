@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { CustomText } from './CustomText';
+import { CustomText } from './components/CustomText';
 
 
 export const HeaderLink = styled(CustomText)<{ active?: boolean }>`
@@ -20,7 +20,7 @@ export const HeaderLink = styled(CustomText)<{ active?: boolean }>`
 	${(props) => 
 		props.active &&
 		`
-			
+			background-color: #00FFFF;
 		`
 	}
 `;
