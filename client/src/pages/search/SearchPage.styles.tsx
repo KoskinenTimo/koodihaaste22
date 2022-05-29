@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { CustomText } from "../../components/CustomText";
 import { CustomInput } from "../../components/CustomInput";
-import { CustomButton } from "../../components/CustomButton";
 
 
 export const MainPageWrapper = styled.div`
@@ -11,9 +10,8 @@ export const MainPageWrapper = styled.div`
 `
 
 export const MainTitle = styled(CustomText)`
-  padding: .5em .5em .5em .2em;
+  padding: .5em;
   background-color: ${(props) => props.styles.background};
-  margin-bottom: .5em;
 `
 
 export const RestaurantInput = styled(CustomInput)`
@@ -54,6 +52,7 @@ export const ToolbarWrapper = styled.div`
 `
 
 export const FlagIconWrapper = styled.div`
+  width: 14%;
   margin: auto 0 auto 1em
 `
 
@@ -64,10 +63,17 @@ export const NoResultsWrapper = styled(CustomText)`
 
 export const SearchIconWrapper = styled.div`
   background-color: ${(props) => props.theme.background};
-  padding: .6em;
+  padding: .8em;
   margin: auto 0 auto auto;
+  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.background};
     opacity: 0.7;
   }
+`
+
+export const LoadingIconWrapper = styled.div`
+  width: 50px;
+  padding: 0;
+  margin: 5em auto;
 `

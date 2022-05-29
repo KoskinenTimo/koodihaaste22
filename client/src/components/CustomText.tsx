@@ -6,6 +6,7 @@ interface ICustomTextProps {
 	// eslint-disable-next-line react/require-default-props
 	size?: any;
 	element?: any;
+	color?: string;
 }
 
 export const CustomText = ({

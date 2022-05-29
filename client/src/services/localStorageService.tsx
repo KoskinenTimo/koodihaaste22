@@ -7,3 +7,7 @@ export const getLocal = (key: string): string | null => {
 export const setLocal = (key: string, value: string) => {
   localStorage.setItem(`${prefix}-${key}`,value);
 }
+
+export const removeLocal = (key: string) => {
+  localStorage.removeItem(`${prefix}-${key}`);
+}
