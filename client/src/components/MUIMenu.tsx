@@ -85,10 +85,20 @@ export const MUIMenu = () => {
           <MenuItemWrapper 
             size='button'
             color={styles.font}
-            onClick={() => navigate(config.paths.ratings)}
+            onClick={() => navigate(config.paths.today)}
             theme={styles}
           >
-            {t('menu.ratings')}
+            {t('menu.today')}
+          </MenuItemWrapper>
+        </MenuItem>
+        <MenuItem onClick={() => handleClose()}>
+          <MenuItemWrapper 
+            size='button'
+            color={styles.font}
+            onClick={() => navigate(config.paths.previous)}
+            theme={styles}
+          >
+            {t('menu.previously')}
           </MenuItemWrapper>
         </MenuItem>
       </Menu>

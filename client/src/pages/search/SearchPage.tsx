@@ -1,10 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  LoadingIconWrapper,
   MainPageWrapper,
-  MainTitle,
-  NoResultsWrapper,
   RestaurantInput,
   RestaurantInputWrapper, 
   SearchIconWrapper,
@@ -15,6 +12,7 @@ import { LoadingIcon, SearchIcon } from '../../icons/common';
 import { CustomError } from '../../components/CustomAlert';
 import { RestaurantListItem } from './components/RestaurantListItem';
 import { getLocal, removeLocal, setLocal } from '../../services/localStorageService';
+import { LoadingIconWrapper, MainTitle, NoResultsWrapper } from '../../styles/common';
 
 
 export type Restaurant = {
@@ -52,8 +50,9 @@ const SearchPage = () => {
     let isVotingDetailsInStorageOld
     if (storedDate) {
       isVotingDetailsInStorageOld = !!(
-          storedDate < new Date() &&
-          storedDate.getDate() !== new Date().getDate()
+          storedDate.getFullYear() < new Date().getFullYear() ||
+          storedDate.getMonth() < new Date().getMonth() ||
+          storedDate.getDate() < new Date().getDate()
         )
     }
     if (isVotingDetailsInStorageOld) {
@@ -98,9 +97,7 @@ const SearchPage = () => {
     }
     try {
       await voteRestaurant(id)
-      const res = await getResults()
-      console.log(res.data);
-      
+      await handleClickAndInputChange(inputValue)
     } catch (err:any) {
       setError(err.message);
       setIsLoading(false)

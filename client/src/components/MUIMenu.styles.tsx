@@ -6,4 +6,10 @@ export const MenuItemWrapper = styled(CustomText)`
   width: 100%;
   min-width: 200px;
   padding: 1em;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.4;
+  }
 `

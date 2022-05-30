@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CustomText } from "../../components/CustomText";
 import { CustomInput } from "../../components/CustomInput";
 
 
@@ -7,11 +6,6 @@ export const MainPageWrapper = styled.div`
   width:100%;
   max-width: 400px;
   margin: 0 auto;
-`
-
-export const MainTitle = styled(CustomText)`
-  padding: .5em;
-  background-color: ${(props) => props.styles.background};
 `
 
 export const RestaurantInput = styled(CustomInput)`
@@ -56,10 +50,6 @@ export const FlagIconWrapper = styled.div`
   margin: auto 0 auto 1em
 `
 
-export const NoResultsWrapper = styled(CustomText)`
-  padding: .8em .8em .8em .4em;
-  background-color: ${(props) => props.styles.background};
-`
 
 export const SearchIconWrapper = styled.div`
   background-color: ${(props) => props.theme.background};
@@ -72,8 +62,3 @@ export const SearchIconWrapper = styled.div`
   }
 `
 
-export const LoadingIconWrapper = styled.div`
-  width: 50px;
-  padding: 0;
-  margin: 5em auto;
-`

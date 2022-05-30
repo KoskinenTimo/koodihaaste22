@@ -6,6 +6,8 @@ import HomePage from './pages/HomePage';
 import { ThemeProvider as CustomThemeProvider } from './theme/ThemeContext';
 import { getLocal } from './services/localStorageService';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 
 function App() {
@@ -21,17 +23,17 @@ function App() {
         setIsLangLoaded(true);
       }))
   },[]);
- 
-
 
   return (
     <div>
-      <Router>
-        <CustomThemeProvider>
-          {isLangLoaded && <HomePage />}
-          {!isLangLoaded && <div>Loading...</div>}
-        </CustomThemeProvider>
-      </Router>
+      <LocalizationProvider dateAdapter={AdapterMoment}>
+        <Router>
+          <CustomThemeProvider>
+            {isLangLoaded && <HomePage />}
+            {!isLangLoaded && <div>Loading...</div>}
+          </CustomThemeProvider>
+        </Router>
+      </LocalizationProvider>
     </div>
   );
 }

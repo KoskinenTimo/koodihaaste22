@@ -6,6 +6,9 @@ import { ThemeContext } from '../theme/ThemeContext';
 import { AppBarTitle, ContentWrapper, PageWrapper } from './HomePage.styles';
 import { Route,Routes } from 'react-router-dom';
 import SearchPage from './search/SearchPage';
+import VotesTodayPage from './votestoday/VotesTodayPage';
+import NotFoundPage from './notfound/NotFoundPage';
+import VotesPreviouslyPage from './votespreviously/VotesPreviouslyPage';
 
 
 const HomePage = () => {
@@ -22,8 +25,10 @@ const HomePage = () => {
       </MUIAppBar>
       <ContentWrapper>
         <Routes>
-          <Route  path='/' element={<SearchPage />} />
-          <Route  path='/ratings' element={<SearchPage />} />
+          <Route path='/' element={<SearchPage />} />
+          <Route path='/todaysvotes' element={<VotesTodayPage />} />
+          <Route path='/previousvotes' element={<VotesPreviouslyPage />} />
+          <Route element={<NotFoundPage />} />
         </Routes>
       </ContentWrapper>
     </PageWrapper>

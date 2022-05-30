@@ -1,6 +1,7 @@
 export const config = {
   paths: {
     search: '/',
-    ratings: '/ratings'
+    today: '/todaysvotes',
+    previous: '/previousvotes',
   }
 }

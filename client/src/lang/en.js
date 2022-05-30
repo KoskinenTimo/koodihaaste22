@@ -4,8 +4,12 @@ export const en = {
   'main.input.placeholder': 'City name',
   'menu.theme': 'theme',
   'menu.search': 'find restaurants',
-  'menu.ratings': 'check ratings',
+  'menu.today': 'todays votes',
+  'menu.previously': 'previous votes',
   'rate.noresults': 'no results found...',
   'restaurant.card.votes': 'votes',
   'restaurant.card.open': 'open',
+  'todays.title': 'Todays votes',
+  'previous.title': 'Previous votes',
+  'previous.input.title': 'Vote date'
 }
