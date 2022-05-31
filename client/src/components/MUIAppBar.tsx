@@ -11,7 +11,6 @@ export const MUIAppBar = ({ children }: any) => {
       >
         <Toolbar>
             {children}
-
         </Toolbar>
       </AppBar>
     </Box>

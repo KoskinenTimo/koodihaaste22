@@ -11,5 +11,6 @@ export const fi = {
   'restaurant.card.open': 'avoinna',
   'todays.title': 'Äänet tänään',
   'previous.title': 'Menneet äänestykset',
-  'previous.input.title': 'Äänestyspäivä'
+  'previous.input.title': 'Äänestyspäivä',
+  'notfoundpage.message': '404, sivua ei löydy...'
 }

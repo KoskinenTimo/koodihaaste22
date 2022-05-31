@@ -9,6 +9,7 @@ import SearchPage from './search/SearchPage';
 import VotesTodayPage from './votestoday/VotesTodayPage';
 import NotFoundPage from './notfound/NotFoundPage';
 import VotesPreviouslyPage from './votespreviously/VotesPreviouslyPage';
+import { AppIcon } from '../icons/common';
 
 
 const HomePage = () => {
@@ -19,16 +20,17 @@ const HomePage = () => {
     <PageWrapper>
       <MUIAppBar>
         <MUIMenu/>
-        <AppBarTitle variant="h6" component="div" theme={styles}>
-          {t('appbar.title')}
-        </AppBarTitle>
+          <AppBarTitle variant="h6" component="div" theme={styles}>
+            {t('appbar.title')}
+          </AppBarTitle>
+          <AppIcon color={styles.font}/>
       </MUIAppBar>
       <ContentWrapper>
         <Routes>
           <Route path='/' element={<SearchPage />} />
           <Route path='/todaysvotes' element={<VotesTodayPage />} />
           <Route path='/previousvotes' element={<VotesPreviouslyPage />} />
-          <Route element={<NotFoundPage />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </ContentWrapper>
     </PageWrapper>

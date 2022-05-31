@@ -6,12 +6,12 @@ import { LoadingIcon } from '../../icons/common';
 import { getResults } from '../../services/restaurantsService';
 import { LoadingIconWrapper, MainTitle, NoResultsWrapper } from '../../styles/common';
 import { ThemeContext } from '../../theme/ThemeContext';
-import { BasicVotesCardWrap, VotesTodayPageWrapper } from './VotesTodayPage.styles';
+import { VotesTodayPageWrapper } from './VotesTodayPage.styles';
 
 export type Restaurant = {
   name: string,
   votes: number,
-  id: string,
+  restaurantid: string,
   openingHours?: string
 }
 
@@ -35,6 +35,10 @@ const VotesTodayPage = () => {
       setVotes(emptyArray)
     }
   }, [])
+
+  useEffect(() => {
+    window.document.title = "Votes today"
+  }, [])
   
   const fetchVotes = () => {
     getResults()
@@ -45,15 +49,16 @@ const VotesTodayPage = () => {
         setError(err.message)
       })
   }
-  const renderVotesList = () => {
+  const renderVotesList = () => {    
     return votes
       .sort((a,b) => b.votes - a.votes)
       .map(restaurant => (
-          <BasicVotesCardWrap
-            key={restaurant.id}
+          <BasicVotesCard
+            key={restaurant.restaurantid}
             {...restaurant}
           />
-      ))
+        )
+      )
   }
 
   return (

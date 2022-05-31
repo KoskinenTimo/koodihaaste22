@@ -11,5 +11,6 @@ export const en = {
   'restaurant.card.open': 'open',
   'todays.title': 'Todays votes',
   'previous.title': 'Previous votes',
-  'previous.input.title': 'Vote date'
+  'previous.input.title': 'Vote date',
+  'notfoundpage.message': 'error 404, page not found...'
 }

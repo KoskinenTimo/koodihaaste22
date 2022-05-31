@@ -3,10 +3,11 @@ import { CustomText } from "../components/CustomText";
 
 export const AppBarTitle = styled(CustomText)`
   flexGrow: 1;
-  margin-right: 10%;
   margin-left: auto;
   text-align: right;
   color: ${(props) => props.theme.font};
+  padding: 1em;
+  margin-right: 2em%;
 `
 
 export const ContentWrapper = styled.div`

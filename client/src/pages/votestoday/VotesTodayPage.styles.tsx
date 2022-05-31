@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BasicVotesCard } from "../../components/BasicVotesCard";
 
 
 export const VotesTodayPageWrapper = styled.div`
@@ -7,5 +6,3 @@ export const VotesTodayPageWrapper = styled.div`
   max-width: 400px;
   margin: 0 auto;
 `
-
-export const BasicVotesCardWrap = styled(BasicVotesCard)``

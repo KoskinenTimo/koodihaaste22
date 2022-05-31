@@ -2,7 +2,7 @@
 import { isMoment } from "moment"
 import React, { useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { BasicPreviousVotesCard } from "../../components/BasicPreviousVotesCard"
+import { BasicVotesCard } from "../../components/BasicVotesCard"
 import { CustomError } from "../../components/CustomAlert"
 import { LoadingIcon } from "../../icons/common"
 import { getResultsOnDate } from "../../services/restaurantsService"
@@ -14,7 +14,7 @@ import { CustomDatePickerWrapper, VotesPreviouslyPageWrapper } from "./VotesPrev
 export type Restaurant = {
   name: string,
   votes: number,
-  id: string,
+  restaurantid: string,
   openingHours?: string
 }
 
@@ -36,6 +36,10 @@ const VotesPreviouslyPage = () => {
       setVotes(emptyArray)
     }
   }, [chosenDate])
+
+  useEffect(() => {
+    window.document.title = "Previous votes"
+  }, [])
 
   const fetchVotes = (inputValue:Date) => {    
     const year = inputValue.getFullYear()
@@ -59,15 +63,16 @@ const VotesPreviouslyPage = () => {
       })
   }
   
-  const renderVotesList = () => {
+  const renderVotesList = () => {    
     return votes
       .sort((a,b) => b.votes - a.votes )
       .map(restaurant => (
-        <BasicPreviousVotesCard
-          key={restaurant.id}
-          {...restaurant}
-        />
-      ))
+          <BasicVotesCard
+            key={restaurant.restaurantid}
+            {...restaurant}
+          />
+        )
+      )
   }
 
   const handleChange = (inputValue: Date | null) => {

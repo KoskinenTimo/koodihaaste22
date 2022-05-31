@@ -64,6 +64,7 @@ export const MUIMenu = () => {
         <MenuItem onClick={() => handleClose()}>
           <MenuItemWrapper 
             size='button'
+            id='toggleTheme'
             color={styles.font}
             onClick={toggleTheme}
             theme={styles}

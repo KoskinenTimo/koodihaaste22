@@ -31,7 +31,7 @@ export const RestaurantListItem = ({
   const { t } = useTranslation();
   const { styles } = useContext(ThemeContext)
   const [ isLiked, setIsLiked ] = useState<boolean>(false)
-
+  
   useEffect(() => {
     if (votedRestaurant === id) {
       setIsLiked(true)

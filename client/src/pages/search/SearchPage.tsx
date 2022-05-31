@@ -39,6 +39,11 @@ const SearchPage = () => {
     handleClickAndInputChange(inputValue)
   }, [inputValue])  
 
+  
+  useEffect(() => {
+    window.document.title = "Search lunches"
+  }, [])
+
   useEffect(() => {
     const votedRestaurantId = getLocal('VOTED_RESTAURANT_ID')
     const votedRestaurantTime = getLocal('VOTED_RESTAURANT_TIME')
@@ -132,7 +137,7 @@ const SearchPage = () => {
         {t('main.title')}
       </MainTitle>
       <RestaurantInputWrapper>
-        <RestaurantInput setInputValue={setInputValue}>
+        <RestaurantInput setInputValue={setInputValue} id={'searchpage-input'}>
           {t('main.input.placeholder')}
         </RestaurantInput>
         <SearchIconWrapper 
