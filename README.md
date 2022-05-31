@@ -4,9 +4,6 @@ MUI was used as much as possible and customized as much as possible with styled 
 
 App is not hosted but it can be started as follows from the root of project:
 
-Backend => 
-cd api && ./gradlew bootRun
-OR
-docker run -p 8080:8080 solidabis/koodihaaste22:latest
+Backend => cd api && ./gradlew bootRun
 
 Frontend => cd client && npm i && npm run build && npm i -g serve && serve -s build
