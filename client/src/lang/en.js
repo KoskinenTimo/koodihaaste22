@@ -13,4 +13,4 @@ export const en = {
   'previous.title': 'Previous votes',
   'previous.input.title': 'Vote date',
   'notfoundpage.message': 'error 404, page not found...'
-}
+};

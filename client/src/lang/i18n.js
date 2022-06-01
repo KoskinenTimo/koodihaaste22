@@ -1,9 +1,9 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-import { languages } from "./lang";
-import { fi } from "./fi";
-import { en } from "./en";
+import { languages } from './lang';
+import { fi } from './fi';
+import { en } from './en';
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -15,20 +15,20 @@ const resources = {
   fi: {
     translation: fi
   }
-}
+};
 const i18nInstance = () =>
   i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    resources,
-    lng: languages.fi, // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    // if you're using a language detector, do not define the lng option
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+      resources,
+      lng: languages.fi, // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+      // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
+      // if you're using a language detector, do not define the lng option
 
-    interpolation: {
-      escapeValue: false // react already safes from xss
-    }
-  });
+      interpolation: {
+        escapeValue: false // react already safes from xss
+      }
+    });
 
 export { i18nInstance };
 export default i18n;

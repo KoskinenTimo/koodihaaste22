@@ -13,4 +13,4 @@ export const fi = {
   'previous.title': 'Menneet äänestykset',
   'previous.input.title': 'Äänestyspäivä',
   'notfoundpage.message': '404, sivua ei löydy...'
-}
+};
