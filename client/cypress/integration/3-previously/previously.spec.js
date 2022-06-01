@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Previous votes', function() {
+describe('Previous votes', () => {
   it('Previous votes page can be opened', () => {
     cy.visit('http://localhost:3000/previousvotes');
     cy.contains('Previous votes');

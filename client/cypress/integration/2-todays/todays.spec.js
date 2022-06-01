@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Todays votes', function() {
+describe('Todays votes', () => {
   it('Todays votes page can be opened', () => {
     cy.visit('http://localhost:3000/todaysvotes');
     cy.contains('Todays votes');

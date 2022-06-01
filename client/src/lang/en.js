@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const en = {
   'appbar.title': 'Lunch app',
   'main.title': 'Vote Lunches',
@@ -12,5 +13,5 @@ export const en = {
   'todays.title': 'Todays votes',
   'previous.title': 'Previous votes',
   'previous.input.title': 'Vote date',
-  'notfoundpage.message': 'error 404, page not found...'
+  'notfoundpage.message': 'error 404, page not found...',
 };

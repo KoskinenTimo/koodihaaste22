@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Search/Main', function() {
+describe('Search/Main', () => {
   it('search/main page can be opened', () => {
     cy.visit('http://localhost:3000');
     cy.contains('Lunch app');

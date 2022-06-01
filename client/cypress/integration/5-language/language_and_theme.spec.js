@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-describe('Language and theme', function() {
+describe('Language and theme', () => {
   it('Language can be changed from menu', () => {
     cy.visit('http://localhost:3000');
     cy.get('button:first').click();
