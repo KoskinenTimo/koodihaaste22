@@ -6,7 +6,7 @@ import {
   RestaurantInputWrapper, 
   SearchIconWrapper,
 } from './SearchPage.styles';
-import { getRestaurants, getResults, voteRestaurant } from '../../services/restaurantsService';
+import { getRestaurants, voteRestaurant } from '../../services/restaurantsService';
 import { ThemeContext } from '../../theme/ThemeContext';
 import { LoadingIcon, SearchIcon } from '../../icons/common';
 import { CustomError } from '../../components/CustomAlert';
@@ -83,6 +83,7 @@ const SearchPage = () => {
       })
       setIsLoading(false)
       setRestaurants(mappedRestaurants)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err:any) {
       setError(err.message);
       setIsLoading(false)
@@ -103,6 +104,7 @@ const SearchPage = () => {
     try {
       await voteRestaurant(id)
       await handleClickAndInputChange(inputValue)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err:any) {
       setError(err.message);
       setIsLoading(false)

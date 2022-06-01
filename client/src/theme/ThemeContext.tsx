@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { ThemeProvider as MuiThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
@@ -49,6 +49,7 @@ export const initMuiTheme = createTheme({
 
 export const ThemeContext = createContext<ThemeContextType>({} as ThemeContextType)
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ThemeProvider = ({ children }: any) => {
   const [ theme, setTheme ] = useState<Theme>("light");
   const [ styles, setStyles ] = useState<Styles>(themes.light);

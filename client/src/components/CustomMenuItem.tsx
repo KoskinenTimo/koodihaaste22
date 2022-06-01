@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MenuItem } from '@mui/material'
 import React from 'react'
 

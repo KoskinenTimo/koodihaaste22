@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const fi = {
   'appbar.title': 'Lounas appi',
   'main.title': 'Äänestä Lounaat',

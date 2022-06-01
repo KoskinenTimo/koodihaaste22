@@ -13,9 +13,7 @@ export type Restaurant = {
 
 export const BasicVotesCard = ({
   name,
-  votes,
-  restaurantid,
-  openingHours
+  votes
 }: Restaurant) => {
   const { t } = useTranslation();
   const { styles } = useContext(ThemeContext)

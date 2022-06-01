@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const en = {
   'appbar.title': 'Lunch app',
   'main.title': 'Vote Lunches',

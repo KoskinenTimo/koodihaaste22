@@ -1,6 +1,7 @@
 import { AppBar, Box, Toolbar } from '@mui/material';
 import React from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const MUIAppBar = ({ children }: any) => {
   return (
     <Box sx={{ flexGrow: 1, height: '5em' }}>
