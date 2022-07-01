@@ -1,9 +1,12 @@
+import React from 'react'
+
 export interface IconProps {
   width?: number;
   height?: number;
   handleClick?: () => void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const FinnishFlagIcon = ({ width, height, handleClick=() => {} }: IconProps) => (
   <svg 
     width={width || "40px"}
@@ -40,6 +43,7 @@ export const FinnishFlagIcon = ({ width, height, handleClick=() => {} }: IconPro
 </svg>
 )
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const EnglishFlagIcon = ({ width, height, handleClick=() => {} }: IconProps) => (
   <svg
     width={width || "40px"}

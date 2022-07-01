@@ -1,23 +1,22 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-import { languages } from "./lang";
-import { fi } from "./fi";
-import { en } from "./en";
+import { languages } from './lang';
+import { fi } from './fi';
+import { en } from './en';
 
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
-    translation: en
+    translation: en,
   },
   fi: {
-    translation: fi
-  }
-}
-const i18nInstance = () =>
-  i18n
+    translation: fi,
+  },
+};
+const i18nInstance = () => i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
@@ -26,8 +25,8 @@ const i18nInstance = () =>
     // if you're using a language detector, do not define the lng option
 
     interpolation: {
-      escapeValue: false // react already safes from xss
-    }
+      escapeValue: false, // react already safes from xss
+    },
   });
 
 export { i18nInstance };

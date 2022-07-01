@@ -12,5 +12,5 @@ export const fi = {
   'todays.title': 'Äänet tänään',
   'previous.title': 'Menneet äänestykset',
   'previous.input.title': 'Äänestyspäivä',
-  'notfoundpage.message': '404, sivua ei löydy...'
-}
+  'notfoundpage.message': '404, sivua ei löydy...',
+};

@@ -26,7 +26,7 @@ const VotesTodayPage = () => {
   useEffect(() => {
     fetchVotes()
     setIsLoading(false)
-    let timer = setInterval(() => {
+    const timer = setInterval(() => {
       fetchVotes()
     },2000)
     return () => {
