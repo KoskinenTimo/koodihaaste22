@@ -6,8 +6,10 @@ App is not hosted but it can be started as follows from the root of project:
 
 Backend => cd api && ./gradlew bootRun
 
-Frontend => cd client && npm i && npm run build && npm i -g serve && serve -s build
+Frontend => cd client && npm i && npm run build && serve -s build // Make sure to install serve globally for this 'npm i -g serve'
+
 OR
+
 cd client && npm i && npm start
 
 Basic testing is done with cypress, start api and client (with npm start) and then run 'npm run cypress:open' in client root
